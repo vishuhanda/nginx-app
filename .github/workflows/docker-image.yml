@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 env:
-  personaltoken: ${{ secrets.GITHUB_TOKEN }}
+  personaltoken: ${{ github.token }}
 
 
 jobs:
