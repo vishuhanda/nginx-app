@@ -1,31 +1,24 @@
 name: Docker Image CI
-
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-
 env:
   GHCR_IO : ${{ secrets.GHCR_IO }}
-
-
 jobs:
   
-
   build:
-
-
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: |
         echo "token ${{ env.GHCR_IO }}" 
+        echo "secrets ${{ secrets.MAJOR_VERSION }} ${{ secrets.MINOR_VERSION }} "
         docker login -u ${{ github.actor}} -p ${{ env.GHCR_IO }} ghcr.io
-        docker build . -f ./dockerFile -t ghcr.io/${{github.actor}}/nginx-app:${{secrets.MAJOR_VERSION}}.${{secrets.MINOR_VERSION}}
+        docker build . --file dockerFile --tag ghcr.io/${{github.actor}}/nginx-app:${{secrets.MAJOR_VERSION}}.${{secrets.MINOR_VERSION}}
         docker push ghcr.io/${{github.actor}}/nginx-app:${{secrets.MAJOR_VERSION}}.${{secrets.MINOR_VERSION}}
-
     -  uses: hmanzur/actions-set-secret@v2.0.0
        with:
           name: 'MINOR_VERSION'
@@ -38,4 +31,4 @@ jobs:
           name: 'MAJOR_VERSION'
           value: ${{ secrets.MAJOR_VERSION }} + 1
           repository: ${{github.repository}}
-          token: ${{ env.GHCR_IO }}  
+          token: ${{ env.GHCR_IO }}
