@@ -6,14 +6,16 @@ on:
   pull_request:
     branches: [ "main" ]
 
+env:
+  GHCR_TOKEN: ${{ secrets.GHCR_IO }}
+
 
 jobs:
   
 
   build:
 
-    env:
-      GHCR_TOKEN: ${{ secrets.GHCR_IO }}
+    
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
