@@ -23,7 +23,7 @@ jobs:
       run: |
         echo "token ${{ env.GHCR_IO }}" 
         docker login -u ${{ github.actor}} -p ${{ env.GHCR_IO }} ghcr.io
-        docker build . -f dockerFile -t ghcr.io/${{github.actor}}/nginx-app:${{secrets.MAJOR_VERSION}}.${{secrets.MINOR_VERSION}}
+        docker build . -f ./dockerFile -t ghcr.io/${{github.actor}}/nginx-app:${{secrets.MAJOR_VERSION}}.${{secrets.MINOR_VERSION}}
         docker push ghcr.io/${{github.actor}}/nginx-app:${{secrets.MAJOR_VERSION}}.${{secrets.MINOR_VERSION}}
 
     -  uses: hmanzur/actions-set-secret@v2.0.0
