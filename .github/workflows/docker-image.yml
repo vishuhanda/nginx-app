@@ -17,19 +17,19 @@ jobs:
     - name: Build the Docker image
       run: |
         docker login -u ${{ github.actor}} -p ${{ github.token }} ghcr.io
-        docker build . --file dockerFile --tag ghcr.io/${{github.actor}}/nginx-app:$(date +%s)
-        docker push ghcr.io/${{github.actor}}/nginx-app:$(date +%s)
+        docker build . --file dockerFile --tag ghcr.io/${{github.actor}}/nginx-app:${{secrets.MAJOR_VERSION}}.${{secrets.MINOR_VERSION}}
+        docker push ghcr.io/${{github.actor}}/nginx-app:${{secrets.MAJOR_VERSION}}.${{secrets.MINOR_VERSION}}
 
     -  uses: hmanzur/actions-set-secret@v2.0.0
        with:
           name: 'MINOR_VERSION'
           value: $((${{ secrets.MINOR_VERSION }} + 1))
           repository: ${{github.actor}}/github.repository
-          token: ${{ secrets.GITHUB_TOKEN }}    
+          token: ${{ github.token }}    
 
     -  uses: hmanzur/actions-set-secret@v2.0.0
        with:
           name: 'MAJOR_VERSION'
           value: $((${{ secrets.MAJOR_VERSION }} + 1))
           repository: ${{github.actor}}/${{github.repository}}
-          token: ${{ secrets.GITHUB_TOKEN }}    
+          token: ${{ github.token }}    
