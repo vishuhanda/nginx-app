@@ -8,7 +8,7 @@ on:
 
 
 jobs:
-
+  
   
   build:
 
@@ -19,7 +19,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: |
-        docker login -u ${{ github.actor}} -p ${{ env.GHCR_TOKEN }} ghcr.io
+        docker login -u ${{ github.actor}} -p $GHCR_TOKEN ghcr.io
         docker build . --file dockerFile --tag ghcr.io/${{github.actor}}/nginx-app:${{secrets.MAJOR_VERSION}}.${{secrets.MINOR_VERSION}}
         docker push ghcr.io/${{github.actor}}/nginx-app:${{secrets.MAJOR_VERSION}}.${{secrets.MINOR_VERSION}}
 
@@ -28,11 +28,11 @@ jobs:
           name: 'MINOR_VERSION'
           value: $((${{ secrets.MINOR_VERSION }} + 1))
           repository: ${{github.actor}}/github.repository
-          token: ${{ github.token }}    
+          token: $GHCR_TOKEN    
 
     -  uses: hmanzur/actions-set-secret@v2.0.0
        with:
           name: 'MAJOR_VERSION'
           value: $((${{ secrets.MAJOR_VERSION }} + 1))
           repository: ${{github.actor}}/${{github.repository}}
-          token: ${{ github.token }}    
+          token: $GHCR_TOKEN   
