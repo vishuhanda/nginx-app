@@ -29,13 +29,13 @@ jobs:
     -  uses: hmanzur/actions-set-secret@v2.0.0
        with:
           name: 'MINOR_VERSION'
-          value: $((${{ secrets.MINOR_VERSION }} + 1))
+          value: ${{ secrets.MINOR_VERSION }} + 1
           repository: ${{github.repository}}
           token: ${{ env.GHCR_IO }} 
 
     -  uses: hmanzur/actions-set-secret@v2.0.0
        with:
           name: 'MAJOR_VERSION'
-          value: $((${{ secrets.MAJOR_VERSION }} + 1))
+          value: ${{ secrets.MAJOR_VERSION }} + 1
           repository: ${{github.repository}}
           token: ${{ env.GHCR_IO }}  
