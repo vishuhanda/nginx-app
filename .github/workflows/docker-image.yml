@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 env:
-  personaltoken: ${{ github.token }}
+  GHCR_IO : ${{ secrets.GHCR_IO }}
 
 
 jobs:
@@ -21,8 +21,8 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: |
-        echo "token ${{env.personaltoken}}" 
-        docker login -u ${{ github.actor}} -p ${{ env.personaltoken }} ghcr.io
+        echo "token ${{ env.GHCR_IO }}" 
+        docker login -u ${{ github.actor}} -p ${{ env.GHCR_IO }} ghcr.io
         docker build . --file dockerFile --tag ghcr.io/${{github.actor}}/nginx-app:${{secrets.MAJOR_VERSION}}.${{secrets.MINOR_VERSION}}
         docker push ghcr.io/${{github.actor}}/nginx-app:${{secrets.MAJOR_VERSION}}.${{secrets.MINOR_VERSION}}
 
