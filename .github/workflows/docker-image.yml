@@ -31,11 +31,11 @@ jobs:
           name: 'MINOR_VERSION'
           value: $((${{ secrets.MINOR_VERSION }} + 1))
           repository: ${{github.actor}}/github.repository
-          token: ${{ secrets.GHCR_IO }} 
+          token: ${{ env.GHCR_IO }} 
 
     -  uses: hmanzur/actions-set-secret@v2.0.0
        with:
           name: 'MAJOR_VERSION'
           value: $((${{ secrets.MAJOR_VERSION }} + 1))
           repository: ${{github.actor}}/${{github.repository}}
-          token: ${{ secrets.GHCR_IO }}  
+          token: ${{ env.GHCR_IO }}  
