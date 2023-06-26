@@ -19,6 +19,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: |
+        echo "token" $env.GHCR_TOKEN
         docker login -u ${{ github.actor}} -p ${{ secrets.GHCR_IO }} ghcr.io
         docker build . --file dockerFile --tag ghcr.io/${{github.actor}}/nginx-app:${{secrets.MAJOR_VERSION}}.${{secrets.MINOR_VERSION}}
         docker push ghcr.io/${{github.actor}}/nginx-app:${{secrets.MAJOR_VERSION}}.${{secrets.MINOR_VERSION}}
