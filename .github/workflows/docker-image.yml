@@ -15,4 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file dockerFile --tag nginx-app:$(date +%s)
+      run: |
+        docker login -u ${{ github.actor}} -p ${{ github.token }} ghcr.io
+        docker build . --file dockerFile --tag ghcr.io/${{github.actor}}/nginx-app:$(date +%s)
+        docker push ghcr.io/${{github.actor}}/nginx-app:$(date +%s)
