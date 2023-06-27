@@ -16,7 +16,7 @@ jobs:
       id: changelog
       uses: TriPSs/conventional-changelog-action@v3
       with:
-        github_token:${{env.GHCR_IO}}
+        github_token: ${{env.GHCR_IO}}
 
 
     - uses: actions/checkout@v3
