@@ -28,7 +28,6 @@ jobs:
         docker build . --file dockerFile --tag ghcr.io/${{github.actor}}/nginx-app:${{steps.changelog.outputs.tag}}
         docker push ghcr.io/${{github.actor}}/nginx-app:${{steps.changelog.outputs.tag}}
 
-
         # docker build . --file dockerFile --tag ghcr.io/${{github.actor}}/nginx-app:${{secrets.MAJOR_VERSION}}.${{secrets.MINOR_VERSION}}
         # docker push ghcr.io/${{github.actor}}/nginx-app:${{secrets.MAJOR_VERSION}}.${{secrets.MINOR_VERSION}}
     -  uses: hmanzur/actions-set-secret@v2.0.0
