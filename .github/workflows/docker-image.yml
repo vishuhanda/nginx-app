@@ -14,7 +14,7 @@ jobs:
 
     - name: conventional changelog release
       id: changelog
-      uses: TriPSs/conventional-changelog-action@3.7.1
+      uses: TriPSs/conventional-changelog-action@v3
       with:
         github_token:${{env.GHCR_IO}}
 
