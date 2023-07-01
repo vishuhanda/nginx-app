@@ -29,10 +29,10 @@ jobs:
            release_name: ${{ steps.changelog.outputs.tag }}
            body: ${{ steps.changelog.outputs.clean_change_log }}
 
-#      - name: Build the Docker image
-#        run: |
-#           echo "token ${{ env.GHCR_IO }}"
-#           echo "secrets ${{ secrets.MAJOR_VERSION }} ${{ secrets.MINOR_VERSION }} "
-#           docker login -u ${{ github.actor}} -p ${{ env.GHCR_IO }} ghcr.io
-#           docker build . --file dockerFile --tag ghcr.io/${{github.actor}}/nginx-app:${{ steps.svt.outputs.major }}.${{ steps.svt.outputs.minor }}.${{ steps.svt.outputs.patch }}
-#           docker push ghcr.io/${{github.actor}}/nginx-app:${{ steps.svt.outputs.major }}.${{ steps.svt.outputs.minor }}.${{ steps.svt.outputs.patch }}
+     - name: Build the Docker image
+       run: |
+          echo "token ${{ env.GHCR_IO }}"
+          echo "secrets ${{ secrets.MAJOR_VERSION }} ${{ secrets.MINOR_VERSION }} "
+          docker login -u ${{ github.actor}} -p ${{ env.GHCR_IO }} ghcr.io
+          docker build . --file dockerFile --tag ghcr.io/${{github.actor}}/nginx-app:${{ steps.svt.outputs.major }}.${{ steps.svt.outputs.minor }}.${{ steps.svt.outputs.patch }}
+          docker push ghcr.io/${{github.actor}}/nginx-app:${{ steps.svt.outputs.major }}.${{ steps.svt.outputs.minor }}.${{ steps.svt.outputs.patch }}
