@@ -18,16 +18,16 @@ jobs:
         id: changelog
         uses: TriPSs/conventional-changelog-action@v3.7.1
         with:
-          github_token: ${{env.GHCR_IO}}
+          github_token: ${{ env.GHCR_IO }}
 
       - name: create release
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{env.GHCR_IO}}
+          GITHUB_TOKEN: ${{ env.GHCR_IO }}
         with:
-           tag_name: ${{steps.changelog.outputs.tag}}
-           release_name: ${{steps.changelog.outputs.tag}}
-           body: ${{steps.changelog.outputs.clean_change_log}}
+           tag_name: ${{ steps.changelog.outputs.tag }}
+           release_name: ${{ steps.changelog.outputs.tag }}
+           body: ${{ steps.changelog.outputs.clean_change_log }}
 
 #      - name: Build the Docker image
 #        run: |
