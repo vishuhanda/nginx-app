@@ -27,7 +27,6 @@ jobs:
            release_name: ${{ steps.changelog.outputs.tag }}
            body: ${{ steps.changelog.outputs.clean_change_log }}
 
-
       - name: Build the Docker image
         run: |
           echo "token ${{ env.GHCR_IO }}"
