@@ -27,27 +27,14 @@ jobs:
                  echo ${{ steps.svt.outputs.buildmetadata }}
 
 
-    # - uses: actions/checkout@v3
-    # - name: Build the Docker image
-    #   run: |
-    #     echo "token ${{ env.GHCR_IO }}"
-    #     echo "secrets ${{ secrets.MAJOR_VERSION }} ${{ secrets.MINOR_VERSION }} "
-    #     docker login -u ${{ github.actor}} -p ${{ env.GHCR_IO }} ghcr.io
-    #     docker build . --file dockerFile --tag ghcr.io/${{github.actor}}/nginx-app:${{steps.changelog.outputs.tag}}
-    #     docker push ghcr.io/${{github.actor}}/nginx-app:${{steps.changelog.outputs.tag}}
+      - uses: actions/checkout@v3
+        name: Build the Docker image
+        run: |
+           echo "token ${{ env.GHCR_IO }}"
+           echo "secrets ${{ secrets.MAJOR_VERSION }} ${{ secrets.MINOR_VERSION }} "
+           docker login -u ${{ github.actor}} -p ${{ env.GHCR_IO }} ghcr.io
+           docker build . --file dockerFile --tag ghcr.io/${{github.actor}}/nginx-app:${{ steps.svt.outputs.major }}.${{ steps.svt.outputs.minor }}.${{ steps.svt.outputs.patch }}
+           docker push ghcr.io/${{github.actor}}/nginx-app:${{ steps.svt.outputs.major }}.${{ steps.svt.outputs.minor }}.${{ steps.svt.outputs.patch }}
 
-    #     # docker build . --file dockerFile --tag ghcr.io/${{github.actor}}/nginx-app:${{secrets.MAJOR_VERSION}}.${{secrets.MINOR_VERSION}}
-    #     # docker push ghcr.io/${{github.actor}}/nginx-app:${{secrets.MAJOR_VERSION}}.${{secrets.MINOR_VERSION}}
-    # -  uses: hmanzur/actions-set-secret@v2.0.0
-    #    with:
-    #       name: 'MINOR_VERSION'
-    #       value: ${{ secrets.MINOR_VERSION }} + 1
-    #       repository: ${{github.repository}}
-    #       token: ${{ env.GHCR_IO }}
-
-    # -  uses: hmanzur/actions-set-secret@v2.0.0
-    #    with:
-    #       name: 'MAJOR_VERSION'
-    #       value: ${{ secrets.MAJOR_VERSION }} + 1
-    #       repository: ${{github.repository}}
-    #       token: ${{ env.GHCR_IO }}
+         # docker build . --file dockerFile --tag ghcr.io/${{github.actor}}/nginx-app:${{secrets.MAJOR_VERSION}}.${{secrets.MINOR_VERSION}}
+         # docker push ghcr.io/${{github.actor}}/nginx-app:${{secrets.MAJOR_VERSION}}.${{secrets.MINOR_VERSION}}
