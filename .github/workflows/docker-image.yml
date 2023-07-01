@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - name: conventional changelog release
+    - name: Bump version and push tag
       id: githubtag
       uses: hennejg/github-tag-action@v4.1.jh1
       with:
