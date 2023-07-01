@@ -7,28 +7,27 @@ on:
 env:
   GHCR_IO : ${{ secrets.GHCR_IO }}
 jobs:
-  
+
   build:
     runs-on: ubuntu-latest
     steps:
 
-    - name: Bump version and push tag
-      id: githubtag
-      uses: hennejg/github-tag-action@v4.1.jh1
-      with:
-        github_token: ${{env.GHCR_IO}}
-        tag_prefix: 'v'
+      - uses: actions/checkout@master
+      - name: Bump version and push tag
+      - uses: hennejg/github-tag-action@v4.1.jh1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
-    - uses: actions/checkout@v3 
-    - name: chk release
-      run: |
-        echo ${{steps.githubtag.new_tag}}  -- ${{steps.githubtag.new_version}} -- ${{steps.githubtag.previous_tag}} -- ${{steps.githubtag.changelog}}
+      - uses: actions/checkout@v3
+      - name: chk release
+        run: |
+         echo ${{steps.githubtag.new_tag}}  -- ${{steps.githubtag.new_version}} -- ${{steps.githubtag.previous_tag}} -- ${{steps.githubtag.changelog}}
 
 
     # - uses: actions/checkout@v3
     # - name: Build the Docker image
     #   run: |
-    #     echo "token ${{ env.GHCR_IO }}" 
+    #     echo "token ${{ env.GHCR_IO }}"
     #     echo "secrets ${{ secrets.MAJOR_VERSION }} ${{ secrets.MINOR_VERSION }} "
     #     docker login -u ${{ github.actor}} -p ${{ env.GHCR_IO }} ghcr.io
     #     docker build . --file dockerFile --tag ghcr.io/${{github.actor}}/nginx-app:${{steps.changelog.outputs.tag}}
@@ -41,7 +40,7 @@ jobs:
     #       name: 'MINOR_VERSION'
     #       value: ${{ secrets.MINOR_VERSION }} + 1
     #       repository: ${{github.repository}}
-    #       token: ${{ env.GHCR_IO }} 
+    #       token: ${{ env.GHCR_IO }}
 
     # -  uses: hmanzur/actions-set-secret@v2.0.0
     #    with:
