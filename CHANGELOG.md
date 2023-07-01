@@ -1,3 +1,12 @@
+# [0.4.0](https://github.com/vishuhanda/nginx-app/compare/v0.3.1...v0.4.0) (2023-07-01)
+
+
+### Features
+
+* feature made ([fab5d69](https://github.com/vishuhanda/nginx-app/commit/fab5d6940d0f190eaa2e9368f78152eea1c51df0))
+
+
+
 ## [0.3.1](https://github.com/vishuhanda/nginx-app/compare/v0.3.0...v0.3.1) (2023-07-01)
 
 
