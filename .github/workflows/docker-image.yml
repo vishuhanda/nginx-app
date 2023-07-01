@@ -19,7 +19,7 @@ jobs:
         id: svt
 
       - name: validation and set params
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
         run: |
                  echo ${{ steps.svt.outputs.major }}
                  echo ${{ steps.svt.outputs.minor }}
