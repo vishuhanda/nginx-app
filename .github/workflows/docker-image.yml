@@ -26,9 +26,7 @@ jobs:
                  echo ${{ steps.svt.outputs.prerelease }}
                  echo ${{ steps.svt.outputs.buildmetadata }}
 
-
-      - uses: actions/checkout@v3
-        name: Build the Docker image
+      - name: Build the Docker image
         run: |
            echo "token ${{ env.GHCR_IO }}"
            echo "secrets ${{ secrets.MAJOR_VERSION }} ${{ secrets.MINOR_VERSION }} "
