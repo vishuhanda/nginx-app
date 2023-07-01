@@ -1,3 +1,12 @@
+## [0.3.1](https://github.com/vishuhanda/nginx-app/compare/v0.3.0...v0.3.1) (2023-07-01)
+
+
+### Bug Fixes
+
+* added a change ([d751dd0](https://github.com/vishuhanda/nginx-app/commit/d751dd026b449c215cbcf53fabbbb1bf771f91e4))
+
+
+
 # [0.3.0](https://github.com/vishuhanda/nginx-app/compare/v0.2.0...v0.3.0) (2023-07-01)
 
 
