@@ -12,17 +12,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - uses: actions/checkout@v3
+#      - uses: actions/checkout@v3
 
-      - name: Bump version and push tag
-        uses: hennejg/github-tag-action@v4.1.jh1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: semantic-versioning-tag
+        uses: LongOddCode/semantic-versioning-tag@0.6.0
+        id: svt
 
+      - name: validation and set params
       - uses: actions/checkout@v3
-      - name: chk release
         run: |
-         echo ${{steps.githubtag.new_tag}}  -- ${{steps.githubtag.new_version}} -- ${{steps.githubtag.previous_tag}} -- ${{steps.githubtag.changelog}}
+                 echo ${{ steps.svt.outputs.major }}
+                 echo ${{ steps.svt.outputs.minor }}
+                 echo ${{ steps.svt.outputs.patch }}
+                 echo ${{ steps.svt.outputs.prerelease }}
+                 echo ${{ steps.svt.outputs.buildmetadata }}
 
 
     # - uses: actions/checkout@v3
