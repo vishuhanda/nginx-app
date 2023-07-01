@@ -1,3 +1,18 @@
+# [0.3.0](https://github.com/vishuhanda/nginx-app/compare/v0.2.0...v0.3.0) (2023-07-01)
+
+
+### Bug Fixes
+
+* docker image fixed name ([5f6a121](https://github.com/vishuhanda/nginx-app/commit/5f6a12189ae83c82055f28af24e07c0dc7142282))
+* fixed this ([dd5a064](https://github.com/vishuhanda/nginx-app/commit/dd5a064853c3994e45ff71b6a4007f0f7fb2ff78))
+
+
+### Features
+
+* check this ([70d72c8](https://github.com/vishuhanda/nginx-app/commit/70d72c8144cd6030400bd136d953a3e0b25363be))
+
+
+
 # [0.2.0](https://github.com/vishuhanda/nginx-app/compare/v0.1.0...v0.2.0) (2023-07-01)
 
 
