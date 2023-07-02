@@ -16,14 +16,14 @@ jobs:
         id: changelog
         uses: TriPSs/conventional-changelog-action@v3
         with:
-          github-token: ${{ env.GHCR_IO }}
+          github-token: ${{ github.token }}
           version-file: './version.yaml'
 
       - name: create release
         if: steps.changelog.outputs.skipped == 'false'
         uses: ncipollo/release-action@v1
         with:
-          token: ${{ env.GHCR_IO }}
+          token: ${{ github.token }}
           tag	: ${{ steps.changelog.outputs.tag }}
           name: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
