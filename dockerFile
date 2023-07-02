@@ -1,7 +1,7 @@
 
 FROM node:latest as node
 LABEL org.opencontainers.image.source='https://github.com/vishuhanda/nginx-app'
-RUN apt update && apt add chromium
+RUN apt-get update && apt install chromium
 WORKDIR /app
 ENV CHROME_BIN=/usr/bin/chromium-browser
 COPY . .
