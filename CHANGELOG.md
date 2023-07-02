@@ -1,3 +1,17 @@
+# [2.0.0](https://github.com/vishuhanda/nginx-app/compare/v1.0.0...v2.0.0) (2023-07-02)
+
+
+### Bug Fixes
+
+* now user can have new release for docker as ([8a6f901](https://github.com/vishuhanda/nginx-app/commit/8a6f9019103fb7b7eff5c033db0d8e4aca908279))
+
+
+### BREAKING CHANGES
+
+* earlier the version was not coming properly
+
+
+
 # [1.0.0](https://github.com/vishuhanda/nginx-app/compare/v0.5.0...v1.0.0) (2023-07-02)
 
 
@@ -36,21 +50,6 @@
 ### Bug Fixes
 
 * added a change ([d751dd0](https://github.com/vishuhanda/nginx-app/commit/d751dd026b449c215cbcf53fabbbb1bf771f91e4))
-
-
-
-# [0.3.0](https://github.com/vishuhanda/nginx-app/compare/v0.2.0...v0.3.0) (2023-07-01)
-
-
-### Bug Fixes
-
-* docker image fixed name ([5f6a121](https://github.com/vishuhanda/nginx-app/commit/5f6a12189ae83c82055f28af24e07c0dc7142282))
-* fixed this ([dd5a064](https://github.com/vishuhanda/nginx-app/commit/dd5a064853c3994e45ff71b6a4007f0f7fb2ff78))
-
-
-### Features
-
-* check this ([70d72c8](https://github.com/vishuhanda/nginx-app/commit/70d72c8144cd6030400bd136d953a3e0b25363be))
 
 
 
