@@ -1,3 +1,12 @@
+## [2.0.5](https://github.com/vishuhanda/nginx-app/compare/v2.0.4...v2.0.5) (2023-07-02)
+
+
+### Bug Fixes
+
+* added apt-get package ([61b4d1f](https://github.com/vishuhanda/nginx-app/commit/61b4d1fdbb9c614fdb19d15c7fc4d51438950eba))
+
+
+
 ## [2.0.4](https://github.com/vishuhanda/nginx-app/compare/v2.0.3...v2.0.4) (2023-07-02)
 
 
@@ -31,20 +40,6 @@
 ### Bug Fixes
 
 * added changes to run tests ([ade73fe](https://github.com/vishuhanda/nginx-app/commit/ade73fe1e8c529b294ac0c8a3b2e25c97969988d))
-
-
-
-# [2.0.0](https://github.com/vishuhanda/nginx-app/compare/v1.0.0...v2.0.0) (2023-07-02)
-
-
-### Bug Fixes
-
-* now user can have new release for docker as ([8a6f901](https://github.com/vishuhanda/nginx-app/commit/8a6f9019103fb7b7eff5c033db0d8e4aca908279))
-
-
-### BREAKING CHANGES
-
-* earlier the version was not coming properly
 
 
 
