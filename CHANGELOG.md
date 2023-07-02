@@ -1,3 +1,12 @@
+## [2.0.4](https://github.com/vishuhanda/nginx-app/compare/v2.0.3...v2.0.4) (2023-07-02)
+
+
+### Bug Fixes
+
+* updating packages ([966badb](https://github.com/vishuhanda/nginx-app/commit/966badbcb5fa7e36173511af17f630bc97b4b53c))
+
+
+
 ## [2.0.3](https://github.com/vishuhanda/nginx-app/compare/v2.0.2...v2.0.3) (2023-07-02)
 
 
@@ -36,20 +45,6 @@
 ### BREAKING CHANGES
 
 * earlier the version was not coming properly
-
-
-
-# [1.0.0](https://github.com/vishuhanda/nginx-app/compare/v0.5.0...v1.0.0) (2023-07-02)
-
-
-### Features
-
-* chk now ([6a9aca6](https://github.com/vishuhanda/nginx-app/commit/6a9aca686e0f495d9047a14fc458db3bbd70bcea))
-
-
-### BREAKING CHANGES
-
-* this should be done now
 
 
 
