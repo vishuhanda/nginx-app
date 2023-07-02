@@ -1,3 +1,12 @@
+## [2.0.2](https://github.com/vishuhanda/nginx-app/compare/v2.0.1...v2.0.2) (2023-07-02)
+
+
+### Bug Fixes
+
+* updated docker file ([251f2f3](https://github.com/vishuhanda/nginx-app/commit/251f2f39353575157a5c0ca76be99adab8c27e69))
+
+
+
 ## [2.0.1](https://github.com/vishuhanda/nginx-app/compare/v2.0.0...v2.0.1) (2023-07-02)
 
 
@@ -41,15 +50,6 @@
 ### Features
 
 * chk this now ([e04d030](https://github.com/vishuhanda/nginx-app/commit/e04d030f6e5099be590d1c66a25a8c89f4c11848))
-
-
-
-# [0.4.0](https://github.com/vishuhanda/nginx-app/compare/v0.3.1...v0.4.0) (2023-07-01)
-
-
-### Features
-
-* feature made ([fab5d69](https://github.com/vishuhanda/nginx-app/commit/fab5d6940d0f190eaa2e9368f78152eea1c51df0))
 
 
 
