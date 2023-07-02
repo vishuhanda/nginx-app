@@ -23,7 +23,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ env.GHCR_IO }}
         with:
-           tag_name: ${{ steps..outputs.tag }}
+           tag_name: ${{ steps.build_docker_image.outputs.tag }}
            release_name: ${{ steps.build_docker_image.outputs.tag }}
            body: ${{ steps.build_docker_image.outputs.clean_change_log }}
 
