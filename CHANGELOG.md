@@ -1,3 +1,12 @@
+## [2.0.6](https://github.com/vishuhanda/nginx-app/compare/v2.0.5...v2.0.6) (2023-07-02)
+
+
+### Bug Fixes
+
+* only install chromiun with no update ([531bca9](https://github.com/vishuhanda/nginx-app/commit/531bca9f897656a44e7406c4915d64d186661440))
+
+
+
 ## [2.0.5](https://github.com/vishuhanda/nginx-app/compare/v2.0.4...v2.0.5) (2023-07-02)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * updated docker file ([251f2f3](https://github.com/vishuhanda/nginx-app/commit/251f2f39353575157a5c0ca76be99adab8c27e69))
-
-
-
-## [2.0.1](https://github.com/vishuhanda/nginx-app/compare/v2.0.0...v2.0.1) (2023-07-02)
-
-
-### Bug Fixes
-
-* added changes to run tests ([ade73fe](https://github.com/vishuhanda/nginx-app/commit/ade73fe1e8c529b294ac0c8a3b2e25c97969988d))
 
 
 
