@@ -1,3 +1,12 @@
+## [2.0.1](https://github.com/vishuhanda/nginx-app/compare/v2.0.0...v2.0.1) (2023-07-02)
+
+
+### Bug Fixes
+
+* added changes to run tests ([ade73fe](https://github.com/vishuhanda/nginx-app/commit/ade73fe1e8c529b294ac0c8a3b2e25c97969988d))
+
+
+
 # [2.0.0](https://github.com/vishuhanda/nginx-app/compare/v1.0.0...v2.0.0) (2023-07-02)
 
 
@@ -41,15 +50,6 @@
 ### Features
 
 * feature made ([fab5d69](https://github.com/vishuhanda/nginx-app/commit/fab5d6940d0f190eaa2e9368f78152eea1c51df0))
-
-
-
-## [0.3.1](https://github.com/vishuhanda/nginx-app/compare/v0.3.0...v0.3.1) (2023-07-01)
-
-
-### Bug Fixes
-
-* added a change ([d751dd0](https://github.com/vishuhanda/nginx-app/commit/d751dd026b449c215cbcf53fabbbb1bf771f91e4))
 
 
 
