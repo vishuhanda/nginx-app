@@ -1,3 +1,12 @@
+## [2.0.8](https://github.com/vishuhanda/nginx-app/compare/v2.0.7...v2.0.8) (2023-07-02)
+
+
+### Bug Fixes
+
+* updated to alpine image to run unit tests ([0cf1957](https://github.com/vishuhanda/nginx-app/commit/0cf1957571cd5c3a965e2be1a0effbb28971f60e))
+
+
+
 ## [2.0.7](https://github.com/vishuhanda/nginx-app/compare/v2.0.6...v2.0.7) (2023-07-02)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * updating packages ([966badb](https://github.com/vishuhanda/nginx-app/commit/966badbcb5fa7e36173511af17f630bc97b4b53c))
-
-
-
-## [2.0.3](https://github.com/vishuhanda/nginx-app/compare/v2.0.2...v2.0.3) (2023-07-02)
-
-
-### Bug Fixes
-
-* updated build ([371cc06](https://github.com/vishuhanda/nginx-app/commit/371cc067e5b4090fd2d5fdd547493745e2292788))
 
 
 
