@@ -1,3 +1,17 @@
+# [1.0.0](https://github.com/vishuhanda/nginx-app/compare/v0.5.0...v1.0.0) (2023-07-02)
+
+
+### Features
+
+* chk now ([6a9aca6](https://github.com/vishuhanda/nginx-app/commit/6a9aca686e0f495d9047a14fc458db3bbd70bcea))
+
+
+### BREAKING CHANGES
+
+* this should be done now
+
+
+
 # [0.5.0](https://github.com/vishuhanda/nginx-app/compare/v0.4.0...v0.5.0) (2023-07-02)
 
 
@@ -37,15 +51,6 @@
 ### Features
 
 * check this ([70d72c8](https://github.com/vishuhanda/nginx-app/commit/70d72c8144cd6030400bd136d953a3e0b25363be))
-
-
-
-# [0.2.0](https://github.com/vishuhanda/nginx-app/compare/v0.1.0...v0.2.0) (2023-07-01)
-
-
-### Features
-
-* updated docker file ([2f4c053](https://github.com/vishuhanda/nginx-app/commit/2f4c0533b355370d9ab40e5b37504d43ba87079d))
 
 
 
