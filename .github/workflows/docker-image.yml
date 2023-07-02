@@ -6,7 +6,7 @@ env:
   GHCR_IO : ${{ secrets.GHCR_IO }}
 jobs:
 
-  Build_docker_image:
+  build_docker_image:
     runs-on: ubuntu-latest
     steps:
 
@@ -23,15 +23,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ env.GHCR_IO }}
         with:
-           tag_name: ${{ steps.changelog.outputs.tag }}
-           release_name: ${{ steps.changelog.outputs.tag }}
-           body: ${{ steps.changelog.outputs.clean_change_log }}
+           tag_name: ${{ steps..outputs.tag }}
+           release_name: ${{ steps.build_docker_image.outputs.tag }}
+           body: ${{ steps.build_docker_image.outputs.clean_change_log }}
 
       - name: Build the Docker image
         run: |
           echo "token ${{ env.GHCR_IO }}"
-          echo "version ${{steps.changelog.outputs.tag}}"
-          echo "changelog ${{steps.changelog.outputs.changelog}}"
+          echo "version ${{steps.build_docker_image.outputs.tag}}"
+          echo "changelog ${{steps.build_docker_image.outputs.changelog}}"
           docker login -u ${{ github.actor}} -p ${{ env.GHCR_IO }} ghcr.io
-          docker build . --file dockerFile --tag ghcr.io/${{github.actor}}/nginx-app:${{ steps.changelog.outputs.tag }}
-          docker push ghcr.io/${{github.actor}}/nginx-app:${{ steps.changelog.outputs.tag }}
+          docker build . --file dockerFile --tag ghcr.io/${{github.actor}}/nginx-app:${{ steps.build_docker_image.outputs.tag }}
+          docker push ghcr.io/${{github.actor}}/nginx-app:${{ steps.build_docker_image.outputs.tag }}
