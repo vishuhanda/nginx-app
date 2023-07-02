@@ -6,7 +6,7 @@ env:
   GHCR_IO : ${{ secrets.GHCR_IO }}
 jobs:
 
-  build_docker_image:
+  changelog:
     runs-on: ubuntu-latest
     steps:
 
@@ -20,6 +20,7 @@ jobs:
 
       - name: create release
         uses: actions/create-release@v1
+        if: ${{ steps.changelog.outputs.skipped == 'false' }}
         env:
           GITHUB_TOKEN: ${{ env.GHCR_IO }}
         with:
