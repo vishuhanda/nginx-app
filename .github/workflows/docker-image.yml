@@ -28,7 +28,6 @@ jobs:
           body: ${{ steps.changelog.outputs.clean_changelog }}
 
 
-          
 
 #      - name: Build the Docker image
 #        run: |
