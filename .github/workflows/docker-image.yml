@@ -6,35 +6,34 @@ env:
   GHCR_IO : ${{ secrets.GHCR_IO }}
 jobs:
 
-  changelog:
-    runs-on: ubuntu-latest
-    steps:
+changelog:
+  runs-on: ubuntu-latest
 
-      - uses: actions/checkout@v3
+  steps:
+    - uses: actions/checkout@v3
 
-      - name: semantic-versioning-tag
-        id: changelog
-        uses: TriPSs/conventional-changelog-action@v3
-        with:
-          github-token: ${{ env.GHCR_IO }}
-          version-file: "./package.json,./package-lock.json"
+    - name: conventional Changelog Action
+      id: changelog
+      uses: TriPSs/conventional-changelog-action@v3
+      with:
+        github-token: ${{ secrets.PA_TOKEN }}
+        version-file: './version.yaml'
+
+    - name: create release
+      if: steps.changelog.outputs.skipped == 'false'
+      uses: ncipollo/release-action@v1
+      with:
+        token: ${{ secrets.PA_TOKEN }}
+        tag	: ${{ steps.changelog.outputs.tag }}
+        name: ${{ steps.changelog.outputs.tag }}
+        body: ${{ steps.changelog.outputs.clean_changelog }}
 
 
-      - name: create release
-        uses: actions/create-release@v1
-        if: ${{ steps.changelog.outputs.skipped == 'false' }}
-        env:
-          GITHUB_TOKEN: ${{ env.GHCR_IO }}
-        with:
-           tag_name: ${{ steps.changelog.outputs.tag }}
-           release_name: ${{ steps.changelog.outputs.tag }}
-           body: ${{ steps.changelog.outputs.clean_change_log }}
-
-      - name: Build the Docker image
-        run: |
-          echo "token ${{ env.GHCR_IO }}"
-          echo "version ${{steps.changelog.outputs.tag}}"
-          echo "changelog ${{steps.changelog.outputs.changelog}}"
-          docker login -u ${{ github.actor}} -p ${{ env.GHCR_IO }} ghcr.io
-          docker build . --file dockerFile --tag ghcr.io/${{github.actor}}/nginx-app:${{ steps.changelog.outputs.tag }}
-          docker push ghcr.io/${{github.actor}}/nginx-app:${{ steps.changelog.outputs.tag }}
+#      - name: Build the Docker image
+#        run: |
+#          echo "token ${{ env.GHCR_IO }}"
+#          echo "version ${{steps.changelog.outputs.tag}}"
+#          echo "changelog ${{steps.changelog.outputs.changelog}}"
+#          docker login -u ${{ github.actor}} -p ${{ env.GHCR_IO }} ghcr.io
+#          docker build . --file dockerFile --tag ghcr.io/${{github.actor}}/nginx-app:${{ steps.changelog.outputs.tag }}
+#          docker push ghcr.io/${{github.actor}}/nginx-app:${{ steps.changelog.outputs.tag }}
