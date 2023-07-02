@@ -6,10 +6,10 @@ env:
   GHCR_IO : ${{ secrets.GHCR_IO }}
 jobs:
 
-changelog:
-  runs-on: ubuntu-latest
+  changelog:
+   runs-on: ubuntu-latest
 
-  steps:
+   steps:
     - uses: actions/checkout@v3
 
     - name: conventional Changelog Action
