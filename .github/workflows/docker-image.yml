@@ -6,7 +6,7 @@ env:
   GHCR_IO : ${{ secrets.GHCR_IO }}
 jobs:
 
-  changelog:
+  release:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,7 +17,6 @@ jobs:
         uses: TriPSs/conventional-changelog-action@v3
         with:
           github-token: ${{ github.token }}
-          version-file: './version.yaml'
 
       - name: create release
         if: steps.changelog.outputs.skipped == 'false'
@@ -28,7 +27,7 @@ jobs:
           name: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
 
-          
+
 
 #      - name: Build the Docker image
 #        run: |
