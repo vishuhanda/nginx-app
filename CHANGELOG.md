@@ -1,3 +1,13 @@
+## [2.0.15](https://github.com/vishuhanda/nginx-app/compare/v2.0.14...v2.0.15) (2023-07-03)
+
+
+### Bug Fixes
+
+* this is a demo branch to check lint tests in angular app ([b9865e3](https://github.com/vishuhanda/nginx-app/commit/b9865e364a22c5559cbfa1cecee0d87e74804685))
+* updated the flow ([babec67](https://github.com/vishuhanda/nginx-app/commit/babec671da74a07f70eede7b81256a55a8697506))
+
+
+
 ## [2.0.14](https://github.com/vishuhanda/nginx-app/compare/v2.0.13...v2.0.14) (2023-07-03)
 
 
@@ -31,15 +41,6 @@
 ### Bug Fixes
 
 * added changes for eslint and added workflow for that ([396d7fd](https://github.com/vishuhanda/nginx-app/commit/396d7fdcf362b24e8ebd53e81558214ac2f18711))
-
-
-
-## [2.0.10](https://github.com/vishuhanda/nginx-app/compare/v2.0.9...v2.0.10) (2023-07-03)
-
-
-### Bug Fixes
-
-* updated alpine version to 3.17 ([41d5c85](https://github.com/vishuhanda/nginx-app/commit/41d5c85f1d2f8222a481465f2393a08e9f99d5ba))
 
 
 
