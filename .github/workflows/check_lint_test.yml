@@ -1,10 +1,9 @@
 name: Check Lint and test
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]  
-
+    branches:
+      - '*'
+      - '!main'
 env:
   GHCR_IO : ${{ secrets.GHCR_IO }}
 jobs:
