@@ -1,3 +1,12 @@
+## [2.0.13](https://github.com/vishuhanda/nginx-app/compare/v2.0.12...v2.0.13) (2023-07-03)
+
+
+### Bug Fixes
+
+* updated node matrix version ([b05b688](https://github.com/vishuhanda/nginx-app/commit/b05b688940a9fad6caa4de2f81c0022ca51970d8))
+
+
+
 ## [2.0.12](https://github.com/vishuhanda/nginx-app/compare/v2.0.11...v2.0.12) (2023-07-03)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * updated docker version of node ([5e25ea3](https://github.com/vishuhanda/nginx-app/commit/5e25ea3ade9c23a4a204d072c3b32d1442b753ec))
-
-
-
-## [2.0.8](https://github.com/vishuhanda/nginx-app/compare/v2.0.7...v2.0.8) (2023-07-02)
-
-
-### Bug Fixes
-
-* updated to alpine image to run unit tests ([0cf1957](https://github.com/vishuhanda/nginx-app/commit/0cf1957571cd5c3a965e2be1a0effbb28971f60e))
 
 
 
