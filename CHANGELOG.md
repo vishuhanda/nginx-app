@@ -1,3 +1,12 @@
+## [2.0.10](https://github.com/vishuhanda/nginx-app/compare/v2.0.9...v2.0.10) (2023-07-03)
+
+
+### Bug Fixes
+
+* updated alpine version to 3.17 ([41d5c85](https://github.com/vishuhanda/nginx-app/commit/41d5c85f1d2f8222a481465f2393a08e9f99d5ba))
+
+
+
 ## [2.0.9](https://github.com/vishuhanda/nginx-app/compare/v2.0.8...v2.0.9) (2023-07-03)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * only install chromiun with no update ([531bca9](https://github.com/vishuhanda/nginx-app/commit/531bca9f897656a44e7406c4915d64d186661440))
-
-
-
-## [2.0.5](https://github.com/vishuhanda/nginx-app/compare/v2.0.4...v2.0.5) (2023-07-02)
-
-
-### Bug Fixes
-
-* added apt-get package ([61b4d1f](https://github.com/vishuhanda/nginx-app/commit/61b4d1fdbb9c614fdb19d15c7fc4d51438950eba))
 
 
 
