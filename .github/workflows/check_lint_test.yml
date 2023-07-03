@@ -1,9 +1,10 @@
 name: Check Lint and test
 on:
-  push:
+  pull_request:
     branches:
-      - '*'
-      - '!main'
+      - 'main'
+    types: [opened,edited,reopened]
+
 env:
   GHCR_IO : ${{ secrets.GHCR_IO }}
 jobs:

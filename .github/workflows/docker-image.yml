@@ -1,7 +1,12 @@
 name: Docker Image CI
 on:
-  push:
-    branches: [ "main" ]
+  pull_request:
+    branches: 
+     -  main
+    types: [closed] 
+     
+    
+
 env:
   GHCR_IO : ${{ secrets.GHCR_IO }}
 jobs:
