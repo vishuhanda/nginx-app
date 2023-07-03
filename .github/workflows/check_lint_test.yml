@@ -1,0 +1,36 @@
+name: Check Lint and test
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]  
+
+env:
+  GHCR_IO : ${{ secrets.GHCR_IO }}
+jobs:
+
+  release:
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x, 20.x]
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: setup node js environment
+        id: nodejs_env
+        uses: actions@setup-node@v2
+        with:
+            node-version: ${{matrix.node-version}}
+      
+      - name: npm install
+        run: | 
+            npm ci
+        
+      - name: run lint
+        run:
+            npm run lint      
+
+        
