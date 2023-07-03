@@ -1,3 +1,12 @@
+## [2.0.11](https://github.com/vishuhanda/nginx-app/compare/v2.0.10...v2.0.11) (2023-07-03)
+
+
+### Bug Fixes
+
+* added changes for eslint and added workflow for that ([396d7fd](https://github.com/vishuhanda/nginx-app/commit/396d7fdcf362b24e8ebd53e81558214ac2f18711))
+
+
+
 ## [2.0.10](https://github.com/vishuhanda/nginx-app/compare/v2.0.9...v2.0.10) (2023-07-03)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * browser change ([ad801f7](https://github.com/vishuhanda/nginx-app/commit/ad801f770d0e860e1c2a47b6f781d4cabfaedf81))
-
-
-
-## [2.0.6](https://github.com/vishuhanda/nginx-app/compare/v2.0.5...v2.0.6) (2023-07-02)
-
-
-### Bug Fixes
-
-* only install chromiun with no update ([531bca9](https://github.com/vishuhanda/nginx-app/commit/531bca9f897656a44e7406c4915d64d186661440))
 
 
 
