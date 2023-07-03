@@ -1,3 +1,12 @@
+## [2.0.9](https://github.com/vishuhanda/nginx-app/compare/v2.0.8...v2.0.9) (2023-07-03)
+
+
+### Bug Fixes
+
+* updated docker version of node ([5e25ea3](https://github.com/vishuhanda/nginx-app/commit/5e25ea3ade9c23a4a204d072c3b32d1442b753ec))
+
+
+
 ## [2.0.8](https://github.com/vishuhanda/nginx-app/compare/v2.0.7...v2.0.8) (2023-07-02)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * added apt-get package ([61b4d1f](https://github.com/vishuhanda/nginx-app/commit/61b4d1fdbb9c614fdb19d15c7fc4d51438950eba))
-
-
-
-## [2.0.4](https://github.com/vishuhanda/nginx-app/compare/v2.0.3...v2.0.4) (2023-07-02)
-
-
-### Bug Fixes
-
-* updating packages ([966badb](https://github.com/vishuhanda/nginx-app/commit/966badbcb5fa7e36173511af17f630bc97b4b53c))
 
 
 
