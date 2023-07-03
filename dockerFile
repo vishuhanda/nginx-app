@@ -1,5 +1,5 @@
 
-FROM node:current-alpine3.12 as node
+FROM node:18.0.0-alpine3.12 as node
 LABEL org.opencontainers.image.source='https://github.com/vishuhanda/nginx-app'
 RUN apk add chromium
 WORKDIR /app
