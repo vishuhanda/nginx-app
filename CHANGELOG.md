@@ -1,3 +1,12 @@
+## [2.0.14](https://github.com/vishuhanda/nginx-app/compare/v2.0.13...v2.0.14) (2023-07-03)
+
+
+### Bug Fixes
+
+* updated package-lock.json file ([d094834](https://github.com/vishuhanda/nginx-app/commit/d0948342ef69aa92e80b6e0b26c6e6f287813330))
+
+
+
 ## [2.0.13](https://github.com/vishuhanda/nginx-app/compare/v2.0.12...v2.0.13) (2023-07-03)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * updated alpine version to 3.17 ([41d5c85](https://github.com/vishuhanda/nginx-app/commit/41d5c85f1d2f8222a481465f2393a08e9f99d5ba))
-
-
-
-## [2.0.9](https://github.com/vishuhanda/nginx-app/compare/v2.0.8...v2.0.9) (2023-07-03)
-
-
-### Bug Fixes
-
-* updated docker version of node ([5e25ea3](https://github.com/vishuhanda/nginx-app/commit/5e25ea3ade9c23a4a204d072c3b32d1442b753ec))
 
 
 
